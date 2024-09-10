@@ -1,10 +1,11 @@
 public class Multiples {
 
-    public static void main() {
+    public static void main(String[] args) {
+
+        int limit = Integer.parseInt(args[0]);
 
         int numMultiples = 0;
-        for (int i = 1; i < 100; i++) {
-
+        for (int i = 1; i < limit; i++) {
             // Find out which numbers divide i.
             boolean divisibleBy3 = i % 3 == 0;
             boolean divisibleBy5 = i % 5 == 0;
@@ -14,6 +15,6 @@ public class Multiples {
                 numMultiples++;
             }
         }
-        System.out.println("Number of multiples: " + numMultiples);
+        System.out.println(numMultiples);
     }
 }
